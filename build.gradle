@@ -6,10 +6,15 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = '13'
 
 repositories {
 	mavenCentral()
+}
+
+bootJar {    
+    baseName = "k2u-springboot"
+    version =  '0.0.1'
 }
 
 dependencies {
@@ -23,6 +28,8 @@ dependencies {
 	}
 	// end::tests[]
 }
+
+apply plugin: 'java'
 
 test {
 	useJUnitPlatform()
